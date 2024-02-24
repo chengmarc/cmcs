@@ -12,5 +12,5 @@ You can also:
 (note: virtual environment will be created under "core-process" so it won't mess up with your existing environment)
 
 # Save location
-By default, data are saved under "<ins>C:\Users\Public\Documents</ins>", database is saved under your download folder. \
+By default, data are saved under "<ins>C:\Users\Public\Documents</ins>". \
 If you want to change the output location, please edit in **cmcs_config.ini** under "<ins>C:\Users\Public</ins>".
