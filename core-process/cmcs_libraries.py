@@ -12,6 +12,7 @@ try:
     from requests import Request, Session
     from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
     print("SYSTEM: Core modules imported.")
+    print("")
 
 except ImportError as e:
     print(f"SYSTEM: The module '{e.name}' is not found, please install it using either pip or conda.")
