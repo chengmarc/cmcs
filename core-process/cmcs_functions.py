@@ -59,8 +59,8 @@ def main2(session, path):
     try:
         url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
         listing = []
-        for i in [0]:
-            parameters = {'start': 1+i*200, 'limit': 200}
+        for i in [0, 1]:
+            parameters = {'start': 1+i*5000, 'limit': 5000}
             response = session.get(url, params=parameters)
             data = json.loads(response.text)
             listing.extend(data['data'])
@@ -106,7 +106,7 @@ def main3(session, path):
 
         # create a category-data map
         data_map = []
-        for category in categories[:5]:
+        for category in categories:
             time.sleep(0.600)
             url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/category'
             parameters = {'id': category['id'], 'limit': 1000}
