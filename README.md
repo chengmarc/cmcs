@@ -3,7 +3,9 @@
 You will need an API key from CMC to use this software.
 
 # First time use
+Go to **Releases** on the right of this page, and download the **.exe** file. That's it.
 
+You can also:
 1. Install Python 3.10.11.
 2. Clone this repository.
 3. Double click **cmcs.bat** and launch the application. \
