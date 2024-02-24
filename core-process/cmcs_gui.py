@@ -104,8 +104,8 @@ console.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
 
 sys.stdout = console
 
-# %% Frame 2 content - api key
 
+# %% Frame 2 content - api key
 frame2.columnconfigure(0, weight=1)
 frame2.columnconfigure(1, weight=0)
 
@@ -118,6 +118,7 @@ text_api.grid(row=0, column=0, sticky="we", padx=10, pady=10)
 # %% Frame 3 content - options
 frame3.columnconfigure(0, weight=1)
 frame3.columnconfigure(1, weight=6)
+
 
 def checkbox(frame):
     global accept1, accept2, accept3

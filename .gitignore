@@ -1,0 +1,4 @@
+__venv__
+core-process/__pycache__
+core-process/distribution
+core-process/CMCScan.spec
