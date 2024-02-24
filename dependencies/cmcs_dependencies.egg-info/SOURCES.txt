@@ -1,0 +1,6 @@
+setup.py
+cmcs_dependencies.egg-info/PKG-INFO
+cmcs_dependencies.egg-info/SOURCES.txt
+cmcs_dependencies.egg-info/dependency_links.txt
+cmcs_dependencies.egg-info/requires.txt
+cmcs_dependencies.egg-info/top_level.txt
