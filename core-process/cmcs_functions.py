@@ -107,14 +107,15 @@ def main3(session, path):
         # create a category-data map
         data_map = []
         for category in categories:
-            time.sleep(2.100)
-            url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/category'
-            parameters = {'id': category['id'], 'limit': 1000}
-            response = session.get(url, params=parameters)
             name = category['name']
-            data = json.loads(response.text)
-            data_map.append((name, data))
-            notice_request_received(name)
+            if 'Ecosystem' not in name and 'Portfolio' not in name:
+                time.sleep(2.100)
+                url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/category'
+                parameters = {'id': category['id'], 'limit': 1000}
+                response = session.get(url, params=parameters)
+                data = json.loads(response.text)
+                data_map.append((name, data))
+                notice_request_received(name)
 
     except (ConnectionError, Timeout, TooManyRedirects):
         notice_timeout()
@@ -123,15 +124,16 @@ def main3(session, path):
     """Extract dataframe"""
     dataframes = []
     for name, data in data_map:
-        listing = data['data']['coins']
+        if 'coins' in data['data'].keys():
+            listing = data['data']['coins']
 
-        df = []
-        for coin in listing:
-            df.append(coin_info(coin))
-        df = pd.DataFrame(df)    
+            df = []
+            for coin in listing:
+                df.append(coin_info(coin))
+            df = pd.DataFrame(df)    
 
-        df.columns = coin_headers(coin)
-        dataframes.append((name, df))
+            df.columns = coin_headers(coin)
+            dataframes.append((name.replace("/", ""), df))
     notice_all_df_extracted()
 
 
