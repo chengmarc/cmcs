@@ -79,7 +79,7 @@ button2.grid(row=4, column=1, sticky="nswe", padx=10, pady=20, columnspan=1)
 
 # %% Frame 1 content - console
 
-
+"""
 class Console(tk.Text):
 
     def __init__(self, *args, **kwargs):
@@ -103,7 +103,7 @@ console = Console(frame1)
 console.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
 
 sys.stdout = console
-
+"""
 
 # %% Frame 2 content - api key
 frame2.columnconfigure(0, weight=1)
