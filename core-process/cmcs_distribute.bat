@@ -1,13 +1,9 @@
 pyinstaller ^
 	--distpath .\distribution ^
 	--workpath .\distribution ^
+	--exclude-module jupyterlab ^
 	--exclude-module matplotlib ^
     --exclude-module scipy ^
-    --exclude-module numpy ^
-    --exclude-module setuptools ^
-    --exclude-module hook ^
-    --exclude-module distutils ^
-    --exclude-module hooks ^
     --exclude-module PIL ^
     --exclude-module PyQt4 ^
     --exclude-module PyQt5 ^
