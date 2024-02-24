@@ -107,7 +107,7 @@ def main3(session, path):
         # create a category-data map
         data_map = []
         for category in categories:
-            time.sleep(0.600)
+            time.sleep(2.100)
             url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/category'
             parameters = {'id': category['id'], 'limit': 1000}
             response = session.get(url, params=parameters)
